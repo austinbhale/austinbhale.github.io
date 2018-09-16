@@ -7,8 +7,17 @@ p {
   line-height: 2rem;
 }
 
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration:none;
+}
+
 .sidenav-trigger {
   color: #26a69a;
+}
+
+.header {
+  text-align: center;
+  margin-top: 15%;
 }
 
 .parallax-container {
