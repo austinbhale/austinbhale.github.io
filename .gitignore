@@ -1,6 +1,2 @@
 # Ignore old index and style
 old*
-
-# Ignore initial materialize css/js files
-materialize/css
-materialize/js
