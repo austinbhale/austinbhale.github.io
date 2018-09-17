@@ -12,7 +12,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .sidenav-trigger {
-  color: #26a69a;
+  color: #283593;
 }
 
 .header {
@@ -26,9 +26,19 @@ a, a:hover, a:active, a:visited, a:focus {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.parallax-container .noparallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {

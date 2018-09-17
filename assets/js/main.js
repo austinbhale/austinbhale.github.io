@@ -1,5 +1,14 @@
 var SCROLLSPY_TIME = 500;
 var heightSlider = $('#nav').height();
+var isMobile = false;
+
+$(window).load(function() {
+    if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {isMobile = true;}
+   
+   for (var i=0; i<4; i++) {
+        (isMobile) ? $('#parallax' + i).css("display", "none") : $('#parallax-mobile' + i).css("display", "none");
+    }
+});
 
 // Smooth scroll to hash -- selects each used link with hashes.
 $('a[href*="#"]') 
