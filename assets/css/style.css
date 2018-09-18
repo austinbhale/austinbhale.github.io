@@ -3,6 +3,14 @@ html, body {
   width: 100%;
 }
 
+body {
+  background-color: #bdbdbd;
+}
+
+#nav {
+  background-color: whitesmoke;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -22,7 +30,6 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .header {
   text-align: center;
-  /* margin-top: 15%; */
 }
 
 .parallax-container {
@@ -30,6 +37,10 @@ a, a:hover, a:active, a:visited, a:focus {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+}
+
+.sect {
+  background: whitesmoke;
 }
 
 .parallax-container .section {
@@ -44,6 +55,26 @@ a, a:hover, a:active, a:visited, a:focus {
   bottom: 0;
   z-index: -1;
 }
+
+@media only screen and (min-width: 601px) {
+  .parallax-container {
+    width: 85%;
+  }
+
+  .page-footer {
+    width: 85%;
+  }
+}
+
+/* @media only screen and (min-width: 993px) {
+  .parallax-container {
+    width: 85%;
+  }
+
+  .page-footer {
+    width: 85%;
+  }
+} */
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -68,13 +99,9 @@ a, a:hover, a:active, a:visited, a:focus {
   font-size: inherit;
 }
 
-footer.page-footer {
-  margin: 0;
-}
-
 #profile-pic {
   display: block;
-  width: 40%;
+  width: 35%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -99,9 +126,52 @@ footer.page-footer {
   color: #bdbdbd;
 }
 
+/* Transparent autofill background */
+@keyframes autofill {
+  to {
+      color: white;
+      background: transparent;
+  }
+}
+
+@-webkit-keyframes autofill {
+  to {
+      color: white;
+      background: transparent;
+  }
+}
+
+input:autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
 #submit-btn {
   display: block;
+  outline: none;
   margin-left: auto;
   margin-right: auto;
-  
+  padding: 5px 15px; 
+  background-color:#bdbdbd; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  transition: background-color 0.7s ease-out;
+  -webkit-transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 0.7s ease-out;
+  -o-transition: background-color 0.7s ease-out;
+}
+
+@media only screen and (min-width: 1024px) {
+  #submit-btn:hover {
+    background-color: whitesmoke;
+  }
 }

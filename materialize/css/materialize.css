@@ -2815,6 +2815,9 @@ video.responsive-video {
   position: relative;
   overflow: hidden;
   height: 500px;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
 }
 
 .parallax-container .parallax {
@@ -2945,6 +2948,9 @@ ul.staggered-list li {
   padding-top: 20px;
   color: #fff;
   background-color: #ee6e73;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
 }
 
 .page-footer .footer-copyright {
@@ -3440,7 +3446,7 @@ table span.badge {
 
 @media only screen and (min-width: 993px) {
   .container {
-    width: 70%;
+    width: 85%;
   }
 }
 
@@ -7532,7 +7538,7 @@ input[type=range]::-ms-thumb {
   height: calc(100% + 60px);
   height: -moz-calc(100%);
   padding-bottom: 60px;
-  background-color: #fff;
+  background-color: whitesmoke;
   z-index: 999;
   overflow-y: auto;
   will-change: transform;

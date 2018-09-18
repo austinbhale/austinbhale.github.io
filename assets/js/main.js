@@ -5,7 +5,7 @@ var isMobile = false;
 $(window).load(function() {
     if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {isMobile = true;}
    
-   for (var i=0; i<5; i++) {
+    for (var i=0; i<5; i++) {
         (isMobile) ? $('#parallax' + i).css("display", "none") : $('#parallax-mobile' + i).css("display", "none");
     }
 });
@@ -26,7 +26,7 @@ $('#gform').on('submit', function(e) {
             }
         });
     } else {
-        alert("missing fields");
+        alert("Please fill in all fields.");
     }
 });
 
