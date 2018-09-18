@@ -5,10 +5,35 @@ var isMobile = false;
 $(window).load(function() {
     if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {isMobile = true;}
    
-   for (var i=0; i<4; i++) {
+   for (var i=0; i<5; i++) {
         (isMobile) ? $('#parallax' + i).css("display", "none") : $('#parallax-mobile' + i).css("display", "none");
     }
 });
+
+// Contact form implementation
+function submitForm() {
+    if ((   $('#first_name').hasClass("validate valid") && 
+            $('#last_name').hasClass("validate valid")) && 
+        (   $('#email_inline').hasClass("validate valid") && 
+            $('#textarea1').hasClass("validate valid")
+        )) {
+            event.preventDefault();
+            var first_name = $('#first_name').val();
+            var last_name = $('#last_name').val();
+            var email = $('#email_inline').val();
+            var message = $('#textarea1').val();
+
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: { first_name: first_name, last_name: last_name,
+              email: email, message: message }
+      })
+      .done(function() {
+          alert("data saved");
+      });  
+    }
+}
 
 // Smooth scroll to hash -- selects each used link with hashes.
 $('a[href*="#"]') 

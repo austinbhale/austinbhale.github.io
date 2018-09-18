@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -17,7 +22,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .header {
   text-align: center;
-  margin-top: 15%;
+  /* margin-top: 15%; */
 }
 
 .parallax-container {
@@ -66,3 +71,43 @@ a, a:hover, a:active, a:visited, a:focus {
 footer.page-footer {
   margin: 0;
 }
+
+#profile-pic {
+  display: block;
+  width: 40%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+}
+
+.icons li {
+  margin: 2px auto;
+}
+
+.icons img {
+  width: 23px;
+}
+
+.icons i {
+  font-size: 23px;
+  vertical-align: bottom;
+}
+
+/* Contact form label color */
+.input-field label {
+  color: #bdbdbd;
+}
+
+#submit-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+/* valid color
+.input-field input[type=text].valid {
+  border-bottom: 1px solid silver;
+  box-shadow: 0 1px 0 0 black;
+} */
