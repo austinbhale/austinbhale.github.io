@@ -22,7 +22,7 @@ function submitForm() {
             var last_name = $('#last_name').val();
             var email_inline = $('#email_inline').val();
             var text_area = $('#textarea1').val();
-            var dataString = 'first='+first_name+'last='+last_name+'&email='+email_inline+'&message'+text_area;
+            var dataString = 'first='+first_name+'&last='+last_name+'&email='+email_inline+'&message='+text_area;
             
             console.log(dataString);
             $.ajax({
@@ -36,6 +36,7 @@ function submitForm() {
             });
              
             }
+    return false;
 }
 
 // Smooth scroll to hash -- selects each used link with hashes.
