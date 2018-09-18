@@ -10,34 +10,31 @@ $(window).load(function() {
     }
 });
 
-// Contact form implementation
-function submitForm() {
-    if ((   $('#first_name').hasClass("validate valid") && 
-            $('#last_name').hasClass("validate valid")) && 
-        (   $('#email_inline').hasClass("validate valid") && 
-            $('#textarea1').hasClass("validate valid")
-        )) {
-
-            var first_name = $('#first_name').val();
-            var last_name = $('#last_name').val();
-            var email_inline = $('#email_inline').val();
-            var text_area = $('#textarea1').val();
-            var dataString = 'first='+first_name+'&last='+last_name+'&email='+email_inline+'&message='+text_area;
-            
-            console.log(dataString);
-            $.ajax({
-                type: "POST",
-                url: "mail.php",
-                data: dataString,
-                cache: false,
-                success: function() {
-                    alert("email sent");
-                }
-            });
-             
+var elementsValid = document.getElementsByClassName('valid');
+var elementsInvalid = document.getElementsByClassName('invalid');
+var valids = false; var invalids = false; var received = false;
+$('#gform').on('submit', function(e) {
+     
+    (elementsValid.length > 3) ? valids = true : valids = false;
+    (elementsInvalid.length == 0) ? invalids = true : invalids = false;
+    
+    if (valids && invalids) {
+        $('#gform *').fadeOut(2000, function() {
+            if (!received) {
+                $('#gform').prepend('Your submission has been processed...');
+                received = true;
             }
-    return false;
-}
+        });
+    } else {
+        alert("missing fields");
+    }
+});
+
+// Adjusts fixed navbar height for hashed sections.
+var shiftWindow = function() { 
+    (location.hash == "#contact") ? scrollBy(0, -heightSlider) : scrollBy(0, -heightSlider); };
+if (location.hash) shiftWindow();
+window.addEventListener("hashchange", shiftWindow);
 
 // Smooth scroll to hash -- selects each used link with hashes.
 $('a[href*="#"]') 
@@ -58,7 +55,6 @@ $('a[href*="#"]')
                 if ($target.is(":focus")) {
                     return false;
                 } else {
-                    // $target.attr('tabindex','-1');
                     $target.focus();
                 };
                 });
