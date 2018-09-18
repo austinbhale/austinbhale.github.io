@@ -17,22 +17,25 @@ function submitForm() {
         (   $('#email_inline').hasClass("validate valid") && 
             $('#textarea1').hasClass("validate valid")
         )) {
-            event.preventDefault();
+
             var first_name = $('#first_name').val();
             var last_name = $('#last_name').val();
-            var email = $('#email_inline').val();
-            var message = $('#textarea1').val();
-
-    $.ajax({
-      type: "POST",
-      url: "mail.php",
-      data: { first_name: first_name, last_name: last_name,
-              email: email, message: message }
-      })
-      .done(function() {
-          alert("data saved");
-      });  
-    }
+            var email_inline = $('#email_inline').val();
+            var text_area = $('#textarea1').val();
+            var dataString = 'first='+first_name+'last='+last_name+'&email='+email_inline+'&message'+text_area;
+            
+            console.log(dataString);
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: dataString,
+                cache: false,
+                success: function() {
+                    alert("email sent");
+                }
+            });
+             
+            }
 }
 
 // Smooth scroll to hash -- selects each used link with hashes.
