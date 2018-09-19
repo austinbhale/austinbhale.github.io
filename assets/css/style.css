@@ -8,7 +8,7 @@ body {
 }
 
 #nav {
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 nav ul a,
@@ -32,22 +32,23 @@ a, a:hover, a:active, a:visited, a:focus {
   text-align: center;
 }
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-
 .sect {
   background: whitesmoke;
 }
 
-.parallax-container .section {
+.parallax-container0 .section,
+.parallax-container1 .section,
+.parallax-container2 .section, 
+.parallax-container3 .section,
+.parallax-container4 .section {
   width: 100%;
 }
 
-.parallax-container .noparallax {
+.noparallax-container .section {
+  width: 100%;
+}
+
+.noparallax-container .noparallax {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,7 +58,15 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 @media only screen and (min-width: 601px) {
-  .parallax-container {
+  .parallax-container0, 
+  .parallax-container1,
+  .parallax-container2, 
+  .parallax-container3,
+  .parallax-container4 {
+    width: 85%;
+  }
+
+  .noparallax-container {
     width: 85%;
   }
 
@@ -76,11 +85,42 @@ a, a:hover, a:active, a:visited, a:focus {
   }
 } */
 
+/* Change parallax background images */
+.parallax-container0 {
+  background-image: url('../../assets/images/franklin.JPG');
+}
+
+.parallax-container1 {
+  background-image: url('../../assets/images/old-well.JPG');
+}
+
+.parallax-container2 {
+  background-image: url('../../assets/images/polk-place.JPG');
+}
+
+.parallax-container3 {
+  background-image: url('../../assets/images/franklin.JPG');
+}
+
+.parallax-container4 {
+  background-image: url('../../assets/images/franklin.JPG');
+}
+
 @media only screen and (max-width : 992px) {
-  .parallax-container .section {
+  .parallax-container0 .section,
+  .parallax-container1 .section,
+  .parallax-container2 .section, 
+  .parallax-container3 .section,
+  .parallax-container4 .section {
     position: absolute;
     top: 40%;
   }
+
+  .noparallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
   #index-banner .section {
     top: 10%;
   }
@@ -144,6 +184,8 @@ a, a:hover, a:active, a:visited, a:focus {
 input:autofill {
   animation-name: autofill;
   animation-fill-mode: both;
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
 }
 
 input:-webkit-autofill {

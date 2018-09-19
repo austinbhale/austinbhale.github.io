@@ -3834,7 +3834,7 @@ $jscomp.polyfill = function (e, r, p, m) {
        */
       value: function destroy() {
         Parallax._parallaxes.splice(Parallax._parallaxes.indexOf(this), 1);
-        this.$img[0].style.transform = '';
+        if (this.$img[0] !== undefined) {this.$img[0].style.transform = '';}
         this._removeEventHandlers();
 
         this.$el[0].M_Parallax = undefined;
@@ -3843,7 +3843,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_setupEventHandlers",
       value: function _setupEventHandlers() {
         this._handleImageLoadBound = this._handleImageLoad.bind(this);
-        this.$img[0].addEventListener('load', this._handleImageLoadBound);
+        if (this.$img[0] !== undefined) {this.$img[0].addEventListener('load', this._handleImageLoadBound);}
 
         if (Parallax._parallaxes.length === 0) {
           Parallax._handleScrollThrottled = M.throttle(Parallax._handleScroll, 5);
@@ -3856,7 +3856,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_removeEventHandlers",
       value: function _removeEventHandlers() {
-        this.$img[0].removeEventListener('load', this._handleImageLoadBound);
+        if (this.$img[0] !== undefined) {this.$img[0].removeEventListener('load', this._handleImageLoadBound);}
 
         if (Parallax._parallaxes.length === 0) {
           window.removeEventListener('scroll', Parallax._handleScrollThrottled);
@@ -3866,7 +3866,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupStyles",
       value: function _setupStyles() {
-        this.$img[0].style.opacity = 1;
+        if (this.$img[0] !== undefined) {this.$img[0].style.opacity = 1;}
       }
     }, {
       key: "_handleImageLoad",
@@ -3877,7 +3877,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "_updateParallax",
       value: function _updateParallax() {
         var containerHeight = this.$el.height() > 0 ? this.el.parentNode.offsetHeight : 500;
-        var imgHeight = this.$img[0].offsetHeight;
+        if (this.$img[0] !== undefined) {var imgHeight = this.$img[0].offsetHeight;}
         var parallaxDist = imgHeight - containerHeight;
         var bottom = this.$el.offset().top + containerHeight;
         var top = this.$el.offset().top;
@@ -3888,9 +3888,9 @@ $jscomp.polyfill = function (e, r, p, m) {
         var parallax = parallaxDist * percentScrolled;
 
         if (!this._enabled) {
-          this.$img[0].style.transform = '';
+          if (this.$img[0] !== undefined) {this.$img[0].style.transform = '';}
         } else if (bottom > scrollTop && top < scrollTop + windowHeight) {
-          this.$img[0].style.transform = "translate3D(-50%, " + parallax + "px, 0)";
+          if (this.$img[0] !== undefined) {this.$img[0].style.transform = "translate3D(-50%, " + parallax + "px, 0)";}
         }
       }
     }], [{

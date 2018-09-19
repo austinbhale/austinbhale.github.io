@@ -7,6 +7,7 @@ $(window).load(function() {
    
     for (var i=0; i<5; i++) {
         (isMobile) ? $('#parallax' + i).css("display", "none") : $('#parallax-mobile' + i).css("display", "none");
+        if (isMobile) {$('#parallax-ctr'+ i).removeClass("parallax-container"+i).addClass("noparallax-container");}
     }
 });
 
