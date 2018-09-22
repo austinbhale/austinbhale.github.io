@@ -8,7 +8,7 @@ body {
 }
 
 #nav {
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 nav ul a,
@@ -26,6 +26,22 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .sidenav-trigger {
   color: #283593;
+}
+
+#idx-hdr {
+  /* margin: 0 auto; */
+  /* position: absolute;
+left: 0;
+right: 0;
+margin: auto; */
+}
+
+.intro-hdr {
+  font-size: 30px;
+}
+
+.intro-bio {
+  font-size: 20px;
 }
 
 .header {
@@ -104,6 +120,22 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .parallax-container4 {
   background-image: url('../../assets/images/franklin.JPG');
+}
+
+#parallax0,
+#parallax1,
+#parallax2,
+#parallax3,
+#parallax4 {
+  display: none;
+}
+
+#parallax-mobile0,
+#parallax-mobile1,
+#parallax-mobile2,
+#parallax-mobile3,
+#parallax-mobile4 {
+  display: none;
 }
 
 @media only screen and (max-width : 992px) {
@@ -216,4 +248,27 @@ input:-webkit-autofill {
   #submit-btn:hover {
     background-color: whitesmoke;
   }
+}
+
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.languages {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.languages li {
+  list-style: none;
+  flex:1;
+}
+
+.yuh {
+  font-weight: bold;
 }

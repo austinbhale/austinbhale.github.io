@@ -1,4 +1,4 @@
-var SCROLLSPY_TIME = 500;
+var SCROLLSPY_TIME = 700;
 var heightSlider = $('#nav').height();
 var isMobile = false;
 
@@ -6,7 +6,7 @@ $(window).load(function() {
     if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {isMobile = true;}
    
     for (var i=0; i<5; i++) {
-        (isMobile) ? $('#parallax' + i).css("display", "none") : $('#parallax-mobile' + i).css("display", "none");
+        (isMobile) ? $('#parallax-mobile' + i).css("display", "block") : $('#parallax' + i).css("display", "block");
         if (isMobile) {$('#parallax-ctr'+ i).removeClass("parallax-container"+i).addClass("noparallax-container");}
     }
 });
@@ -22,7 +22,7 @@ $('#gform').on('submit', function(e) {
     if (valids && invalids) {
         $('#gform *').fadeOut(2000, function() {
             if (!received) {
-                $('#gform').prepend('Your submission has been processed...');
+                $('#gform').prepend('Thanks! I\'ll be in touch with you soon.');
                 received = true;
             }
         });
