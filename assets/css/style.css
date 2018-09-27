@@ -8,7 +8,8 @@ body {
 }
 
 #nav {
-  background-color: whitesmoke;
+  background-color:rgba(255, 255, 255, 0.95);
+  /* background-color: whitesmoke; */
 }
 
 nav ul a,
@@ -28,20 +29,15 @@ a, a:hover, a:active, a:visited, a:focus {
   color: #283593;
 }
 
-#idx-hdr {
-  /* margin: 0 auto; */
-  /* position: absolute;
-left: 0;
-right: 0;
-margin: auto; */
-}
-
 .intro-hdr {
   font-size: 30px;
+  font-weight: bold;
+  color: #99badd;
 }
 
 .intro-bio {
   font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .header {
@@ -91,23 +87,15 @@ margin: auto; */
   }
 }
 
-/* @media only screen and (min-width: 993px) {
-  .parallax-container {
-    width: 85%;
-  }
-
-  .page-footer {
-    width: 85%;
-  }
-} */
-
 /* Change parallax background images */
 .parallax-container0 {
-  background-image: url('../../assets/images/franklin.JPG');
+  background-image: url('../../assets/images/polk-overhead.JPG');
+  opacity: 0.9;
 }
 
 .parallax-container1 {
-  background-image: url('../../assets/images/old-well.JPG');
+  background-image: url('../../assets/images/markus-spiske-109588-unsplash.jpg');
+  opacity: 0.9;
 }
 
 .parallax-container2 {
@@ -246,7 +234,11 @@ input:-webkit-autofill {
 
 @media only screen and (min-width: 1024px) {
   #submit-btn:hover {
-    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  #profile-pic {
+    width: 30%;
   }
 }
 
@@ -267,8 +259,4 @@ input:-webkit-autofill {
 .languages li {
   list-style: none;
   flex:1;
-}
-
-.yuh {
-  font-weight: bold;
 }
