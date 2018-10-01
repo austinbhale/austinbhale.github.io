@@ -6155,7 +6155,7 @@ input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
-  color: white; /* Change text color input */
+  color: black; /* Change text color input */
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #9e9e9e;

@@ -189,14 +189,14 @@ a, a:hover, a:active, a:visited, a:focus {
 /* Transparent autofill background */
 @keyframes autofill {
   to {
-      color: white;
+      color: black;
       background: transparent;
   }
 }
 
 @-webkit-keyframes autofill {
   to {
-      color: white;
+      color: black;
       background: transparent;
   }
 }
