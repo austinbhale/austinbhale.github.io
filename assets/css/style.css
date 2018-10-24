@@ -9,7 +9,6 @@ body {
 
 #nav {
   background-color:rgba(255, 255, 255, 0.95);
-  /* background-color: whitesmoke; */
 }
 
 nav ul a,
@@ -38,6 +37,22 @@ a, a:hover, a:active, a:visited, a:focus {
 .intro-bio {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+#rlink {
+  color: grey;
+}
+
+#rlink:hover, #rlink:active {
+  color: blueviolet;
+}
+
+.link {
+  color: #99badd;
+}
+
+.link:hover, .link:active {
+  color: rgb(99, 145, 172);
 }
 
 .header {
@@ -89,7 +104,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Change parallax background images */
 .parallax-container0 {
-  background-image: url('../../assets/images/polk-overhead.JPG');
+  background-image: url('../images/polk-overhead.jpg');
   opacity: 0.9;
 }
 
@@ -99,15 +114,18 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .parallax-container2 {
-  background-image: url('../../assets/images/polk-place.JPG');
+  background-image: url('../../assets/images/architectural-design-architecture.jpg');
+  opacity: 0.9;
 }
 
 .parallax-container3 {
-  background-image: url('../../assets/images/franklin.JPG');
+  background-image: url('../../assets/images/polk-place.jpg');
+  opacity: 0.9;
 }
 
 .parallax-container4 {
-  background-image: url('../../assets/images/franklin.JPG');
+  background-image: url('../../assets/images/franklin.jpg');
+  opacity: 0.9;
 }
 
 #parallax0,
