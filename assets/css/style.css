@@ -104,27 +104,27 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Change parallax background images */
 .parallax-container0 {
-  background-image: url('../images/polk-overhead.jpg');
+  background-image: url('../images/unc-polk-overhead.jpg');
   opacity: 0.9;
 }
 
 .parallax-container1 {
-  background-image: url('../../assets/images/markus-spiske-109588-unsplash.jpg');
+  background-image: url('../images/markus-spiske-109588-unsplash.jpg');
   opacity: 0.9;
 }
 
 .parallax-container2 {
-  background-image: url('../../assets/images/architectural-design-architecture.jpg');
+  background-image: url('../images/architectural-design.jpg');
   opacity: 0.9;
 }
 
 .parallax-container3 {
-  background-image: url('../../assets/images/polk-place.jpg');
+  background-image: url('../images/unc-polk-place.jpg');
   opacity: 0.9;
 }
 
 .parallax-container4 {
-  background-image: url('../../assets/images/franklin.jpg');
+  background-image: url('../images/franklin-scene.jpg');
   opacity: 0.9;
 }
 
