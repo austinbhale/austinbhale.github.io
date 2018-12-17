@@ -283,3 +283,13 @@ input:-webkit-autofill {
   position: relative; 
   margin: 0 auto;
 }
+
+.org-title {
+  font-style: italic;
+  font-size: 15px;
+  color: rgb(99, 145, 172);
+}
+
+.hideme {
+  opacity:0;
+}
