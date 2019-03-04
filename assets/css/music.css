@@ -2,13 +2,16 @@ html,
 body {
     /* background-color: white; */
     overflow: auto;
-    background-image: url('/assets/images/bg-vid.gif');
+    /* background-image: url('/assets/images/bg-vid.gif'); */
+    background: url('/assets/images/bg-vid.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
 .header {
     width: 100%;
-
 }
 
 .header-title {
@@ -25,16 +28,91 @@ body {
 }
 
 .list-group-item {
-    color: silver;
+    color: rgb(158, 158, 158);
+    ;
     background-color: black;
+    padding: .15rem 2rem;
+    height: 100%;
 }
 
 .list-group-item:hover {
-    background-color: silver;
-    border-color: silver;
+    background-color: black;
+    border-color: black;
+    color: white;
 }
 
 .list-group-item.active {
     background-color: #99badd;
     border-color: #99badd;
+    /* color: rgb(158, 158, 158); */
+}
+
+#submit-btn {
+    display: block;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 15px;
+    background-color: rgb(158, 158, 158);
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    transition: background-color 0.7s ease-out;
+    -webkit-transition: background-color 0.7s ease-out;
+    -moz-transition: background-color 0.7s ease-out;
+    -o-transition: background-color 0.7s ease-out;
+}
+
+@media only screen and (min-width: 1024px) {
+    #submit-btn:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Transparent autofill background */
+@keyframes autofill {
+    to {
+        color: black;
+        background: transparent;
+    }
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: black;
+        background: transparent;
+    }
+}
+
+input:autofill {
+    animation-name: autofill;
+    animation-fill-mode: both;
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+input:-webkit-autofill {
+    animation-name: autofill;
+    animation-fill-mode: both;
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+#gform {
+    color: black;
+}
+
+h5,
+p {
+    text-align: center;
+}
+
+#icons {
+    display: flex;
+}
+
+#icons iframe,
+#icons a {
+    margin-left: 15%;
 }

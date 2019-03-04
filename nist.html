@@ -28,21 +28,33 @@ Copyright (c) 2019 Austin Hale -->
     </div>
     <div class="row">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action" id="about-list" data-toggle="list" href="#about" role="tab"
-          aria-controls="home">About</a>
+        <a class="list-group-item list-group-item-action" id="about-music-list" data-toggle="list" href="#about-music"
+          role="tab" aria-controls="home">about</a>
 
         <a class="list-group-item list-group-item-action active" id="music-list" data-toggle="list" href="#music" role="tab"
-          aria-controls="profile">Music</a>
+          aria-controls="profile">music</a>
 
-        <a class="list-group-item list-group-item-action" id="contact-list" data-toggle="list" href="#contact" role="tab"
-          aria-controls="messages">Contact</a>
+        <a class="list-group-item list-group-item-action" id="contact-music-list" data-toggle="list" href="#contact-music"
+          role="tab" aria-controls="messages">contact</a>
 
       </div>
     </div>
     <div class="row">
       <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-list">
-          <h5>hi i'm Nist</h5>
+        <div class="tab-pane fade" id="about-music" role="tabpanel" aria-labelledby="about-music-list">
+          <h5>hi, i'm Nist</h5>
+          <p>
+            Creator and Producer for alternative, electronic, and hip hop music.
+          </p>
+          <br />
+          <div id="icons">
+            <!-- Soundcloud -->
+            <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Faustin_hale&color=black_white&size=32"
+              style="width: 32px; height: 32px;"></iframe>
+            <!-- YouTube -->
+            <a href="http://www.youtube.com/channel/UCYOLodhgO-JaRL37SfDyprg"><img src="assets/icons/yt_logo_mono_light.png"
+                style="height: 32px;" /></a>
+          </div>
         </div>
         <div class="tab-pane fade show active" id="music" role="tabpanel" aria-labelledby="music-list">
           <!-- music -->
@@ -53,8 +65,36 @@ Copyright (c) 2019 Austin Hale -->
           <iframe width="100%" height="315" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/720985326&color=%2399badd&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
 
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-list">
-          <h5>Contact Me</h5>
+        <div class="tab-pane fade" id="contact-music" role="tabpanel" aria-labelledby="contact-music-list">
+          <div class="page-footer" style="background-color: transparent;">
+            <div class="row">
+              <div class="col l6 s12">
+                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSe-q0NKg5jz16uYn2u1PezcJigH6al7_wEAea3T8mv1ArNb1A/formResponse?usp=pp_url"
+                  target="hidden_iframe">
+                  <div class="input-field col s6">
+                    <input id="entry.1491475932" name="entry.1491475932" type="text" class="validate">
+                    <label for="entry.1491475932" class="black-text">First Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="entry.181703257" name="entry.181703257" type="text" class="validate">
+                    <label for="entry.181703257" class="black-text">Last Name</label>
+                  </div>
+                  <div class="input-field col inline">
+                    <input id="entry.1641095657" name="entry.1641095657" type="email" class="validate">
+                    <label for="entry.1641095657" class="black-text">Email</label>
+                  </div><br>
+                  <div class="input-field col inline">
+                    <textarea id="entry.2083445618" name="entry.2083445618" class="materialize-textarea validate"></textarea>
+                    <label for="entry.2083445618" class="black-text">Message</label>
+                  </div>
+                  <br><br><br>
+                  <input type="submit" value="Submit" id="submit-btn" />
+                </form>
+
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -66,6 +106,9 @@ Copyright (c) 2019 Austin Hale -->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"></script>
+<script src="materialize/js/materialize.js"></script>
+<script src="materialize/js/init.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>
