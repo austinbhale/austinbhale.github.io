@@ -1,0 +1,61 @@
+html,
+body {
+    /* background-color: white; */
+    overflow: auto;
+}
+
+.header {
+    width: 100%;
+
+}
+
+.header-title {
+    text-align: center;
+}
+
+.list-group {
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.tab-content {
+    margin: 0 auto;
+}
+
+.list-group-item {
+    color: silver;
+    background-color: black;
+}
+
+.list-group-item:hover {
+    background-color: silver;
+    border-color: silver;
+}
+
+.list-group-item.active {
+    background-color: #99badd;
+    border-color: #99badd;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#album-pic {
+    width: 50%;
+    height: 50%;
+}
