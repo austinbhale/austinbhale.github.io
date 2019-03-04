@@ -2,6 +2,8 @@ html,
 body {
     /* background-color: white; */
     overflow: auto;
+    background-image: url('/assets/images/bg-vid.gif');
+    background-size: cover;
 }
 
 .header {
@@ -35,27 +37,4 @@ body {
 .list-group-item.active {
     background-color: #99badd;
     border-color: #99badd;
-}
-
-.fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-}
-
-.fullscreen-bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-#album-pic {
-    width: 50%;
-    height: 50%;
 }
