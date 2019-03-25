@@ -1,8 +1,7 @@
 html,
 body {
-    /* background-color: white; */
+    background-color: black;
     overflow: auto;
-    /* background-image: url('/assets/images/bg-vid.gif'); */
     background: url('/assets/images/bg-vid.gif') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

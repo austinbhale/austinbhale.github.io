@@ -63,6 +63,11 @@ a, a:hover, a:active, a:visited, a:focus {
   background: whitesmoke;
 }
 
+.no-pad-bot {
+  width: 100%;
+  text-align: center;
+}
+
 .parallax-container0 .section,
 .parallax-container1 .section,
 .parallax-container2 .section, 
