@@ -4,10 +4,10 @@ $(function () {
 
     // Remove the scrolling effect for non-mobile devices.
     for (var i = 0; i < 5; i++) {
-        (isMobile) ? $('#parallax-mobile' + i).css("display", "block"): $('#parallax' + i).css("display", "block");
-        if (isMobile) {
-            $('#parallax-ctr' + i).removeClass("parallax-container" + i).addClass("noparallax-container");
-        }
+        // (isMobile) ? $('#parallax-mobile' + i).css("display", "block"): $('#parallax' + i).css("display", "block");
+        // if (isMobile) {
+        //     $('#parallax-ctr' + i).removeClass("parallax-container" + i).addClass("noparallax-container");
+        // }
     }
 
     // Set visited cookie for returning to displayed text.
