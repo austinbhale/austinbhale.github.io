@@ -3,33 +3,62 @@ $(function () {
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     // Remove the scrolling effect for non-mobile devices.
-    for (var i = 0; i < 5; i++) {
-        // (isMobile) ? $('#parallax-mobile' + i).css("display", "block"): $('#parallax' + i).css("display", "block");
-        // if (isMobile) {
-        //     $('#parallax-ctr' + i).removeClass("parallax-container" + i).addClass("noparallax-container");
-        // }
+    for (var i = 1; i < 4; i++) {
+        (isMobile) ? $('#parallax-mobile' + i).css("display", "block"): $('#parallax' + i).css("display", "block");
+        if (isMobile) {
+            $('#parallax-ctr' + i).removeClass("parallax-container" + i).addClass("noparallax-container");
+        }
     }
 
     // Set visited cookie for returning to displayed text.
     if (getCookie('visited')) {
         $('.hideme').css("opacity", "1.0");
+        (screen.width <= 600) ? $('.moving-line').css("width", "50px") : $('.moving-line').css("width", "100px");
+        $("body").removeClass("hideme");
         deleteCookie('visited');
     } else {
-        // Cookie expires in 999 days.
-        setCookie('visited', 'true', 999);
         $(window).scroll(function () {
+
             $('.hideme').each(function (i) {
                 var top_half_of_object = $(this).position().top + ($(this).outerHeight() / 4);
                 var bottom_of_window = $(window).scrollTop() + $(window).height();
                 // If the object is completely visible in the window, fade it in.
+
                 if (bottom_of_window > top_half_of_object) {
                     $(this).animate({
                         'opacity': '1'
                     }, 500);
+                    lines();
                 }
             });
         });
+        // Cookie expires in 999 days.
+        setCookie('visited', 'true', 999);
     }
+
+    // Horizontal languages/technologies area.
+    $('.customer-logos').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        draggable: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        swipeToSlide: true,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
 });
 
 // Set the cookie for seeing if the page has been visited.
@@ -61,6 +90,70 @@ var getCookie = function (cookie_name) {
 var deleteCookie = function (name) {
     document.cookie = name + '=; expire_date=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
+
+var fNameWrapper = document.querySelector('.animate-ctr .fname');
+fNameWrapper.innerHTML = fNameWrapper.textContent.replace(/\S/g, "<span class='first-letter'>$&</span>");
+
+var lNameWrapper = document.querySelector('.animate-ctr .lname');
+lNameWrapper.innerHTML = lNameWrapper.textContent.replace(/\S/g, "<span class='last-letter'>$&</span>");
+
+anime.timeline({
+        loop: false
+    })
+    .add({
+        targets: '.h',
+        translateY: (screen.width <= 600) ? '14vh' : '25vh',
+        easing: 'easeInOutExpo',
+        delay: 600,
+        endDelay: 300,
+        duration: 2000
+    })
+    .add({
+        targets: '.animate-ctr .first-letter',
+        scale: [0.3, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 600,
+        delay: (el, i) => 70 * (i + 1)
+    })
+    .add({
+        targets: '.animate-ctr .last-letter',
+        scale: [0.3, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 600,
+        delay: (el, i) => 70 * (i + 1)
+    })
+    .add({
+        targets: '.animate-ctr',
+        translateX: '-25%',
+        easing: "easeInOutExpo",
+        duration: 1000
+    })
+    .add({
+        targets: ['.links', '#nav'],
+        opacity: 1,
+        duration: 1600
+    })
+    .add({
+        targets: '.down-arr',
+        opacity: 1,
+        easing: 'easeInOutExpo',
+        duration: 700,
+        translateY: '90vh'
+    });
+
+function lines() {
+    anime({
+        targets: '.moving-line',
+        width: (screen.width <= 600) ? '50px' : '100px',
+        easing: 'easeOutExpo',
+        duration: 2000
+    });
+}
+
 
 $('#gform').on('submit', function (e) {
 
@@ -120,3 +213,83 @@ $('a[href*="#"]')
             }
         }
     });
+
+// Project triangle animation
+var btn = document.getElementById('project0');
+var oldHeight = $('.projects').height();
+var active = false;
+var activeSection = '';
+$(".project-links").click(function (event) {
+    var section = '.' + event.target.id;
+    // Prevent rapid clicking bugs.
+    if (!/\.project[0-9]+/i.test(section) || active) {
+        return;
+    }
+    $(section).css("display", "block");
+    active = true;
+    activeSection = section;
+    $('.projects').animate({
+        height: $(section).height() + 15
+    }, 300);
+    var morphing = anime({
+        targets: '.polymorph',
+        points: [{
+                value: '0,40 0, 110 0, 0 47.7, 0 67, 76'
+            },
+            {
+                value: '0,80 0, 110 50, 100 0, 0 0, 76'
+            }
+        ],
+        easing: 'easeOutQuad',
+        duration: 1200,
+        loop: false
+    });
+
+    anime({
+        targets: section,
+        opacity: 1,
+        duration: 500,
+        easing: 'easeInQuad',
+    });
+
+    $('.project-links').fadeOut(500);
+
+    var promise = morphing.finished.then(() => {
+        $(".cta2").click(function () {
+            var morphing = anime({
+                targets: '.polymorph',
+                points: [{
+                        value: '0,80 0, 110 0, 0 47.7, 0 67, 76'
+                    },
+                    {
+                        value: '0,40 0,110 0,0 49.3,0 215,0'
+                    }
+                ],
+                easing: 'easeOutQuad',
+                duration: 1200,
+                loop: false
+            });
+            anime({
+                targets: section,
+                opacity: 0,
+                duration: 500,
+                easing: 'easeOutQuad'
+            });
+
+            $('.project-links').fadeIn(500);
+            $('.projects').animate({
+                height: oldHeight
+            }, 500);
+            $(section).css("display", "none");
+            active = false;
+        });
+    });
+});
+
+window.addEventListener('resize', function(event){
+    if (activeSection !== '') {
+        $('.projects').height($(activeSection).height() + 15)
+    }
+
+    $('.h').css("transform", `translateY(${$('.lname').css("margin-top")})`);
+});

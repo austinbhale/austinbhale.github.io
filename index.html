@@ -15,8 +15,8 @@ Copyright (c) 2019 Austin Hale -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="assets/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="https://fonts.googleapis.com/css?family=Barlow:100|Raleway:100&display=swap" rel="stylesheet">
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300|Raleway:100&display=swap" rel="stylesheet">
 </head>
 
 <body id="home">
@@ -24,18 +24,16 @@ Copyright (c) 2019 Austin Hale -->
     <div class="nav-wrapper container">
       <a id="logo-container" href="#home" class="brand-logo hide-on-med-and-down">~</a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="black-text" href="#about">About</a></li>
-        <li><a class="black-text" href="#projects">Projects</a></li>
-        <li><a class="black-text" href="#experience">Experience</a></li>
-        <li id="notablet"><a class="black-text" href="#community">Community</a></li>
-        <li><a class="black-text" href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li id="notablet"><a href="#community">Community</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -43,34 +41,56 @@ Copyright (c) 2019 Austin Hale -->
   </nav>
 
   <div id="parallax-ctr0" class="parallax-container0 valign-wrapper container">
-    <div class="no-pad-bot">
-      <div>
-        <h3 class="header intro-hdr selectDisable">Austin Hale</h3>
+    <div class="links">
+      <a target="_blank" href="http://github.com/austinbhale"><img class="github-icon" src="assets/icons/github.gif"
+          alt="Github"></a>
+      <a target="_blank" href="http://linkedin.com/in/austinbhale/"><img class="linkedin-icon"
+          src="assets/icons/linkedin.gif" alt="LinkedIn"></a>
+      <a target="_blank" href="mailto:ah@unc.edu?Subject=Contact"><img class="mail-icon" src="assets/icons/mail.gif"
+          alt="Email"></a>
+      <a target="_blank" href="assets/images/Austin_Hale_Resume.pdf"><img class="resume-icon"
+          src="assets/icons/resume.gif" alt="Resume"></a>
+    </div>
+    <a href="#about"><img class="down-arr" src="assets/icons/down-arr.png" alt="About"></a>
+    <div class="no-pad-bot animate-ctr">
+      <div class="selectDisable">
+        <span class="h">H</span>
+        <span class="a">A</span>
+        <span class="fname" id="fname">Austin</span>
+        <span class="lname" id="lname">Hale</span>
+        <!-- <h3 class="header intro-hdr selectDisable">Austin Hale</h3>
         <h5 class="header intro-bio selectDisable">Student | Learning Assistant | Research Assistant | JMP Technical
           Intern at SAS</h5>
-        <h5 class="header intro-bio selectDisable">Computer Science - UNC Chapel Hill</h5>
+        <h5 class="header intro-bio selectDisable">Computer Science - UNC Chapel Hill</h5> -->
       </div>
     </div>
-    <div id="parallax0" class="parallax"></div>
-    <div id="parallax-mobile0" class="noparallax"><img style="opacity: 0.9"
-        src="assets/images/unc-polk-overhead-mobile.jpg"></div>
   </div>
 
 
-  <div class="container sect" style="background-color: #99badd">
+  <div class="container sect">
     <div id="about" class="section hideme">
-      <h3 class="header">About Me</h3>
-      <img id="profile-pic" src="assets/images/profile-pic.jpg"><br>
-      <div class="row">
-        <div class="col s12 center">
+      <h1 class="header">
+        <span class="moving-line"></span>
+        About Me
+        <span class="moving-line"></span>
+      </h1>
+      <div class="row icons">
+        <div class="col m3 s12 center">
+          <img id="profile-pic" src="assets/images/profile.jpg">
+        </div>
+        <div class="col m9 s12 center">
           <p class="left-align light">
-            Hello, and welcome to my website! My name is Austin Hale, and I am currently a junior computer science
-            major at the University of North Carolina at Chapel Hill.
-            Pursuing a bachelor's degree, I expect to graduate in May of 2021.
-            With technical skills ranging from systems engineering to 3-tier web applications, I hope to collaborate on
-            any project or research topic.
-            Check out my <a id="rlink" href="assets/images/Austin_Hale_Resume.pdf">resume</a> for any more details
-            about myself and feel free to reach out below.
+            &#x1F40F Junior computer science major at the University of North Carolina at Chapel Hill.
+          </p>
+          <p class="left-align light">
+            Currently working as a JMP Technical Intern for SAS Institute in Cary, NC. &#x1F4BB
+          </p>
+          <p class="left-align light">
+            I enjoy computer graphics, web development, and audio/data visualizations, just to name a few.
+          </p>
+          <p class="left-align light">
+            &#x1F4C3 Feel free to check out my <a id="rlink" href="assets/images/Austin_Hale_Resume.pdf">resume</a> for
+            any more technical details.
           </p>
         </div>
       </div>
@@ -84,280 +104,504 @@ Copyright (c) 2019 Austin Hale -->
     <div id="parallax-mobile1" class="noparallax"><img src="assets/images/markus-spiske-109588-unsplash.jpg"></div>
   </div>
 
-  <div class="container sect" style="color: rgba(255, 255, 255, 0.8); background-color: #424242">
-    <div id="projects" class="section hideme">
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h5 class="center">Web Development</h5>
-            <br>
-            <p class="light">
-              Front-end and back-end development for creating sites from scratch.
-              <br><br>Created or modified the following websites:</p>
-            <ul>
-              <li class="light">&bull; <a class="link" href="#">this site!</a></li>
-              <li class="light">&bull; <a class="link" href="http://austinhale.cph426.com">austinhale.cph426.com</a>
-              </li>
-              <li class="light">&bull; <a class="link" href="https://sydneybhale.com">sydneybhale.com</a></li>
-              <li class="light">&bull; <a class="link" href="https://hacknc.com">hacknc.com</a></li>
-              <li class="light">&bull; <a class="link" href="https://austinbhale.com/vetanda">vetanda.org</a></li>
-              <li class="light">&bull; <a class="link"
-                  href="http://edwardtrentzsch.github.io">edwardtrentzsch.github.io</a></li>
-            </ul>
-          </div>
-        </div>
+  <div class="container sect projects">
+    <div id="projects">
+      <svg viewBox="0 0 215 110">
+        <polygon class="polymorph" points="0,40 0,110 0,0 49.3,0 215,0" />
+      </svg>
+      <ul class="project-links">
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h5 class="center">Clang Visualizer</h5>
-            <br>
-            <p class="light">A visualizer for LLVM's linting tool: clang-tidy.
-              <br><br>Features include:</p>
-            <ul class="light">
-              <li>&bull; Organization of checks for ease of accessibility.</li>
-              <li>&bull; Original log file containing full initial output of compiler warnings.</li>
-              <li>&bull; Highlighting functionality for personal use.</li>
-              <li>&bull; External link option to easily extend to other documentation tools.</li>
-            </ul>
-            <p class="light">Find out more information in its <a class="link"
-                href="https://github.com/austinbhale/Clang-Visualizer">Github</a>
-              repository.</p>
-          </div>
-        </div>
+        <li class="project-name"><a href="#projects" id="project0">Web development</a> </li>
+        <li class="project-name"><a href="#projects" id="project1">Tar Heel Hero</a></li>
+        <li class="project-name"><a href="#projects" id="project2">Tar Heel Music</a></li>
+        <li class="project-name"><a href="#projects" id="project3">Clang Visualizer</a></li>
+        <li class="project-name"><a href="#projects" id="project4">thegrep</a></li>
+        <li class="project-name"><a href="#projects" id="project5">Local Chat System</a></li>
+        <li class="project-name"><a href="#projects" id="project6">RaceRunna</a></li>
+      </ul>
+
+      <div class="project0 blip">
+        <h1 class="center">Web Development</h1>
+        <hr>
+        <p>
+          Front-end and back-end development for creating sites from scratch.</p>
+        <p>
+          Created or modified the following websites:</p>
+        <ul>
+          <li><a class="link" href="#">this site!</a></li>
+          <li><a class="link" href="http://austinhale.cph426.com/">austinhale.cph426.com</a>
+          </li>
+          <li><a class="link" href="https://vetandadance.com">vetandadance.com</a></li>
+          <li><a class="link" href="https://sydneybhale.com">sydneybhale.com</a></li>
+          <li><a class="link" href="https://hacknc.com">hacknc.com</a></li>
+          <li><a class="link" href="https://edwardtrentzsch.github.io">edwardtrentzsch.github.io</a>
+          </li>
+        </ul>
+        <a href="#projects" class="cta2">Go Back</a>
       </div>
-      <div class="row">
-        <div class="icon-block">
-          <h5 class="center">Tar Heel Music</h5>
-          <br>
-          <p class="light">An enabling music application developed to be accessible for all individuals.</p>
-          <ul class="light">
-            <li>&bull; Uses Magenta.js for generating new note sequences with machine learning.</li>
-            <li>&bull; Able to record real-time user input and export as a midi file.</li>
-            <li>&bull; Project to be showcased at <a class="link" href="https://cs.unc.edu/outreach/maze-day/">UNC Maze
-                Day</a>.</li>
+      <div class="project1 blip">
+        <h1 class="center">Tar Heel Hero</h1>
+        <hr>
+        <p>Guitar Hero-like game designed to be accessible for all individuals as part of a Research Project.</p>
+        <h2>The Process</h2>
+        <p>Created a script that parses Music XML files generated from Sheet Music to use actual notes from songs.</p>
+        <p>Rendered a THREE.js scene with moving lines and notes.</p>
+        <p>Used Vanilla JS and HTML/CSS for the menu and additional game features.</p>
+        <h2><a href="https://tarheelhero.com">Game</a></h2>
+        <a href="#projects" class="cta2">Go Back</a>
+
+      </div>
+      <div class="project2 blip">
+        <h1 class="center">Tar Heel Music</h1>
+        <hr>
+        <p>An enabling music application developed to be accessible for all individuals.</p>
+        <ul>
+          <li>Uses Magenta.js for generating new note sequences with machine learning.</li>
+          <li>Able to record real-time user input and export as a midi file.</li>
+          <li>Project to be showcased at <a class="link" href="https://cs.unc.edu/outreach/maze-day/">UNC Maze
+              Day</a>.</li>
+        </ul>
+        <h2><a href="https://github.com/bishop-research-group-2019-spring/Enabling-Music-Player">Github</a></h2>
+        <a href="#projects" class="cta2">Go Back</a>
+
+      </div>
+      <div class="project3 blip">
+        <h1 class="center">Clang Visualizer</h1>
+        <hr>
+        <p>A visualizer for LLVM's linting tool: clang-tidy.
+        </p>
+        <p>Features include:</p>
+        <ul>
+          <li>Organization of checks for ease of accessibility.</li>
+          <li>Original log file containing full initial output of compiler warnings.</li>
+          <li>Highlighting functionality for personal use.</li>
+          <li>External link option to easily extend to other documentation tools.</li>
+        </ul>
+        <h2><a href="https://github.com/austinbhale/Clang-Visualizer">Github</a></h2>
+        <a href="#projects" class="cta2">Go Back</a>
+
+      </div>
+      <div class="project4 blip">
+        <h1 class="center" id="thegrep">thegrep</h1>
+        <hr>
+        <p>Command line program that utilizes lexemes and a grammar to replicate the egrep program on most Linux/Unix
+          devices.</p>
+        <h2 id="getting-started">Getting Started</h2>
+        <p>Lexemes of <strong>thegrep</strong>:</p>
+        <pre><code>&lt;LParen&gt;      ::= &#39;(&#39;
+&lt;RParen&gt;      ::= &#39;)&#39;
+&lt;UnionBar&gt;    ::= &#39;|&#39;
+&lt;KleeneStar&gt;  ::= &#39;*&#39;
+&lt;AnyChar&gt;     ::= &#39;.&#39;
+&lt;Char&gt;        ::= any character except &#39;(&#39;, &#39;)&#39;, &#39;|&#39;, &#39;.&#39;, &#39;*&#39;</code></pre>
+        <p>Grammar of <strong>thegrep</strong>:</p>
+        <pre><code>&lt;RegExpr&gt;     ::= &lt;Catenation&gt; &lt;UnionBar &lt;RegExpr&gt;&gt;?
+&lt;Catenation&gt;  ::= &lt;Closure&gt; &lt;Catenation&gt;?
+&lt;Closure&gt;     ::= &lt;Atom&gt; KleeneStar?
+&lt;Atom&gt;        ::= LParen &lt;RegExpr&gt; RParen | AnyChar | Char</code></pre>
+        <p>Usage:</p>
+        <pre><code>thegrep [FLAGS] &lt;pattern&gt;
+
+FLAGS:
+  -h, --help      Prints help information
+  -p, --parse     Show Parsed AST
+  -t, --tokens    Show Tokens
+  -d, --dot       Show Dot Diagram
+  -V, --version   Prints version information
+
+ARGS:
+  &lt;pattern&gt;     Regular Expression Pattern</code></pre>
+        <p>With Rust's package manager Cargo, you could also run <code>cargo run -- [FLAGS] &lt;pattern&gt;</code>.</p>
+        <h2 id="organization">Organization</h2>
+        <p>The overall organization of this project consists of three files and each with their own distinct task:
+          <ul>
+            <li><a href="assets/projects/thegrep/src/main.rs">main.rs</a> handles the command line options for
+              processing input</li>
+            <li><a href="assets/projects/thegrep/src/tokenizer.rs">tokenizer.rs</a> acts as a tokenizer for identifying
+              and consuming each lexeme in
+              thegrep.</li>
+            <li><a href="assets/projects/thegrep/src/parser.rs">parser.rs</a> handles thegrep's grammar in how
+              non-terminals coincide with
+              one another.</li>
           </ul>
-          <p class="light">Try out the prototype on <a class="link"
-              href="https://github.com/bishop-research-group-2019-spring/Enabling-Music-Player">Github</a>.</p>
-        </div>
+        </p>
+        <h2 id="accomplishments">Accomplishments</h2>
+        <p>The aspects of this design that I am particularly proud of include the organization within the Tokenizer and
+          Parser. By taking input in the main file, I was able to separate each flag's processes in a succinct manner.
+          With these files, I split the core evaluation and helper methods. In addition, I found the design decision to
+          contain factory functions for the Parser extremely efficient when conducting test code.</p>
+        <h2 id="additional-notes">Additional Notes</h2>
+        <p>As far as testing is concerned, there are public and private tests located in the Tokenizer and Parser. These
+          tests ensure the validity of public and private functions. They also panic for invalid instances in thegrep's
+          lexemes and grammar.</p>
+        <h2><a href="assets/projects/thegrep/">Source Code</a></h2>
+        <a href="#projects" class="cta2">Go Back</a>
       </div>
+      <div class="project5 blip">
+        <h1 class="center" id="local-chat-system">Local Chat System</h1>
+        <hr>
+        <p>Expanded chat application that modeled the simple SocketIO <a
+            href="https://github.com/socketio/chat-example">example</a>.</p>
+        <h2 id="current-features">Current Features</h2>
+        <ul>
+          <li>Custom usernames</li>
+          <li>Active users list</li>
+        </ul>
+        <div class="figure">
+          <img src="https://raw.githubusercontent.com/austinbhale/local-chat-system/master/assets/User.gif"
+            title="New User" alt="Users example" />
+        </div>
+        <ul>
+          <br>
+          <li>Real-time &quot;{name} is typing...&quot; functionality</li>
+          <li>Modern message bubbles</li>
+        </ul>
+        <br>
+        <div class="figure">
+          <img src="https://raw.githubusercontent.com/austinbhale/local-chat-system/master/assets/Chat.gif"
+            title="Chat Messages" alt="Chat example" />
+        </div>
+        <ul>
+          <br>
+          <li>Message history for new users</li>
+          <li>Connection/Disconnection broadcasted messages</li>
+        </ul>
+        <br>
+        <div class="figure">
+          <img src="https://raw.githubusercontent.com/austinbhale/local-chat-system/master/assets/History.gif"
+            title="History" alt="History example" />
+        </div>
+        <h2><a href="https://github.com/austinbhale/local-chat-system">Github</a></h2>
+
+        <a href="#projects" class="cta2">Go Back</a>
+
+      </div>
+      <div class="project6 blip">
+        <h1 class="center">RaceRunna</h1>
+        <hr>
+        <p>
+          For our Hack110 Project, we created a single player racing game.
+        </p>
+        <p>There is a moving road where players aim to
+          hit the UNC
+          logos and avoid the ones from the "other" schools. If players hit a State logo, they lose points. If they hit
+          a Dook logo, they lose the game entirely.
+        </p>
+        <p>
+          More information about the challenges faced can be found <a
+            href="http://apps.introcs.com/haleau/hack110/project-spec.html">here</a>.
+        </p>
+        <h2><a href="http://apps.introcs.com/haleau/hack110/RaceRunna.html">Game</a></h2>
+        <a href="#projects" class="cta2">Go Back</a>
+
+      </div>
+      <!-- <div class="project1 blip">
+        
+        </div> -->
     </div>
   </div>
-  </div>
+  <!-- </div> -->
 
   <div id="parallax-ctr2" class="parallax-container2 valign-wrapper container">
     <h1 class="parallax-title light selectDisable">Experience</h1>
     <div id="parallax2" class="parallax"></div>
-    <div id="parallax-mobile2" class="noparallax"><img src="assets/images/architectural-design.jpg"></div>
+    <div id="parallax-mobile2" class="noparallax"><img src="assets/images/unc-polk-place.jpg"></div>
 
   </div>
 
-  <div class="container sect" style="background-color: #99badd">
-    <div id="experience" class="section hideme">
+  <div class="container sect">
+    <div id="experience" class="section">
 
-      <div class="row">
-        <div class="col s12 center">
-          <h5 style="text-align: left">JMP Technical Intern</h5>
-          <h6 style="text-align: left">SAS</h6>
+      <div class="row wrap">
+        <div class="col s12 m3">
+          <img src="assets/images/sas.png" alt="SAS logo">
+        </div>
+        <div class="col s12 m9 center">
+          <h5 class="left-align">JMP Technical Intern</h5>
+          <h6 class="left-align sas">SAS</h6>
+          <p class="left-align light">
+            Automate crash report associations in Python with known and unknown defects for
+            developers and technical support.
+          </p>
           <p class="left-align light">
             Debug Python/JS/Perl scripts, create Jenkins builds, and rewrite Perl scripts to JSL
-            for JMP Research & Development that support the Documentation team.              
+            for JMP Research & Development that support the Documentation team.
           </p>
-          <br>
-          <h5 style="text-align: left">Undergraduate Research Assistant</h5>
-          <h6 style="text-align: left">UNC Chapel Hill - Department of Computer Science</h6>
           <p class="left-align light">
-            Develop and maintain enabling technologies for individuals with disabilities.
+            Create and manage Jenkins builds to process scripts that generate contrasting
+            screenshots and database scripting in JMP.
           </p>
-          <br>
-          <h5 style="text-align: left">C20 Engineering Intern</h5>
-          <h6 style="text-align: left">Ribbon Communications</h6>
           <p class="left-align light">
-            Responsible for the design, documentation, and evolution of call server products and solutions.
+            Rewrite internal Perl scripts to JSL in order to be more accessible for future developers.
           </p>
-          <br>
-          <h5 style="text-align: left">Undergraduate Learning Assistant</h5>
-          <h6 style="text-align: left">COMP 401 - Foundations of Programming</h6>
+        </div>
+        <div class='shape-background-weak triangle-left-weak'></div>
+        <div class='shape-background-strong triangle-left-strong sas-triangle'></div>
+      </div>
+      <div class="row wrap">
+        <div class="col s12 m3">
+          <img src="assets/images/CS_UNC_blue.png" alt="CS UNC logo">
+        </div>
+        <div class="col s12 m9 center">
+          <h5 class="left-align">Undergraduate Research Assistant</h5>
+          <h6 class="left-align unc">UNC Chapel Hill - Department of Computer Science</h6>
+          <p class="left-align light">
+            Assist the development of software designed to enable people with disabilities to
+            participate in education, literacy, and gameplay.
+          </p>
+          <p class="left-align light">
+            These projects include
+            <a target="_blank" href="https://tarheelhero.com">Tar Heel Hero</a> and <a target="_blank"
+              href="https://https://github.com/bishop-research-group-2019-spring/Enabling-Music-Player">Tar Heel
+              Music</a>.
+          </p>
+        </div>
+        <div class='shape-background-weak triangle-right-weak'></div>
+        <div class='shape-background-strong triangle-right-strong unc-triangle'></div>
+      </div>
+      <div class="row wrap">
+        <div class="col s12 m3">
+          <img src="assets/images/CS_UNC_blue.png" alt="CS UNC logo">
+        </div>
+        <div class="col s12 m9 center">
+          <h5 class="left-align">Undergraduate Learning Assistant</h5>
+          <h6 class="left-align unc">COMP 227 - Effective Peer Teaching in Computer Science</h6>
+          <p class="left-align light">
+            Strengthen learning assistants’ understanding of topics in computer science pedagogy.
+            Created a repository of <a href="https://www.youtube.com/channel/UCuUWa7schOr994gfPuK-V0g">videos</a> used
+            for LA training in the Computer Science department.
+          </p>
+          <h6 class="left-align unc">COMP 401 - Foundations of Programming</h6>
           <p class="left-align light">
             Reinforce the concepts taught in the Foundations of Programming course to over 450 students through
             office hours, online questioning boards, and recitations.
           </p>
-          <br>
-          <h5 style="text-align: center">Languages</h5><br>
-          <ul>
-            <div class="row languages">
-              <li>C</li>
-              <li>C++</li>
-              <li>C#</li>
-              <li>HTML/CSS</li>
-
-            </div><br>
-            <div class="row languages">
-              <li>Java</li>
-              <li>Javascript/JQuery</li>
-              <li>JSL</li>
-              <li>Perl</li>
-
-            </div><br>
-            <div class="row languages">
-              <li>Python</li>
-              <li>Rust</li>
-              <li>SCSS</li>
-              <li>Typescript</li>
-            </div>
-          </ul>
-          <br>
-          <h5 style="text-align: center">Technologies</h5><br>
-          <ul>
-            <div class="row languages">
-              <li>Bash</li>
-              <li>Bootstrap</li>
-              <li>ClearCase</li>
-              <li>Doxygen</li>
-            </div><br>
-            <div class="row languages">
-              <li>Jenkins</li>
-              <li>Linux OS</li>
-              <li>Unix</li>
-              <li>VMware</li>
-            </div>
-          </ul>
+        </div>
+        <div class='shape-background-weak triangle-left-weak'></div>
+        <div class='shape-background-strong triangle-left-strong unc-triangle'></div>
+      </div>
+      <div class="row wrap">
+        <div class="col s12 m3">
+          <img src="assets/images/ribbon.png" alt="Ribbon logo">
+        </div>
+        <div class="col s12 m9 center">
+          <h5 class="left-align">C20 Engineering Intern</h5>
+          <h6 class="left-align ribbon">Ribbon Communications</h6>
+          <p class="left-align light">
+            Responsible for the design, documentation, and evolution of call server products and solutions.
+          </p>
+          <p class="left-align light">
+            Generate dependency graphs to exhibit relations between classes in separate modules.
+          </p>
+          <p class="left-align light">
+            Debug multiple source files for typical programming errors using Clang-Tidy.
+          </p>
+          <p class="left-align light">
+            Design scripts to provide simpler access to C20 call traffic assessments using Perl.
+          </p>
+        </div>
+        <div class='shape-background-weak triangle-right-weak'></div>
+        <div class='shape-background-strong triangle-right-strong ribbon-triangle'></div>
+      </div>
+      <h4 class="center">Languages</h4>
+      <div class="customer-logos language-boxes">
+        <div class="slide">
+          <p>C</p>
+          <p class="star">&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>C++</p>
+          <p class="star">&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>C#</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>HTML/CSS</p>
+          <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Java</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>JavaScript</p>
+          <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>JSL</p>
+          <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Perl</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Python</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Rust</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>TypeScript</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
         </div>
       </div>
-
+      <h4 class="center">Technologies</h4>
+      <div class="customer-logos technology-boxes">
+        <div class="slide">
+          <p>Bash</p>
+          <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Bootstrap</p>
+          <p class="star">&starf;&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>ClearCase</p>
+          <p class="star">&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Doxygen</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Jenkins</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Linux OS</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>Unix</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+        <div class="slide">
+          <p>VMWare</p>
+          <p class="star">&starf;&starf;&starf;&starf;</p>
+        </div>
+      </div>
+      <h4 class="center">Involvement</h4>
+      <div class="row wrap">
+        <div class="col s12 m3">
+          <img src="assets/images/CS_UNC_blue.png" alt="cS UNC logo">
+        </div>
+        <div class="col s12 m9 center">
+          <h5 class="left-align">Enabling Technology Club</h5>
+          <h6 class="left-align unc">President</h6>
+          <p class="left-align light">
+            Contribute to the collection of over 10 million books read on
+            <a class="link" href="https://tarheelreader.org/">Tar Heel Reader</a> that allows individuals
+            with disabilities to read for education and enjoyment.
+          </p>
+          <p class="left-align light">
+            Conduct meetings with speakers and new technologies to enhance community involvement with UNC's
+            annual <a target="_blank" href="https://cs.unc.edu/outreach/maze-day/">Maze Day</a>.
+          </p>
+        </div>
+        <div class='shape-background-strong circle-left ribbon'></div>
+        <div class='shape-background-strong circle-right ribbon'></div>
+        <div class='shape-background-strong square-left sas'></div>
+        <div class='shape-background-strong square-right sas'></div>
+        <div class='shape-background-strong triangle-left unc-triangle-up'></div>
+        <div class='shape-background-strong triangle-right unc-triangle-up'></div>
+      </div>
+      <div class="row wrap">
+        <div class="col s12 m3">
+          <img src="assets/images/bpss.jpg" alt="BPSS logo">
+        </div>
+        <div class="col s12 m9 center">
+          <h5 class="left-align">Buckley Public Service Scholars</h5>
+          <h6 class="left-align unc">Enrolled Member</h6>
+          <p class="left-align light">
+            Exhibit a strong committment to public service through 300 hours
+            of service, four skills trainings, and a service-learning course.
+          </p>
+        </div>
+        <div class='shape-background-strong circle-left unc'></div>
+        <div class='shape-background-strong circle-right unc'></div>
+        <div class='shape-background-strong square-left ribbon'></div>
+        <div class='shape-background-strong square-right ribbon'></div>
+        <div class='shape-background-strong triangle-left sas-triangle-up'></div>
+        <div class='shape-background-strong triangle-right sas-triangle-up'></div>
+      </div>
     </div>
   </div>
 
   <div id="parallax-ctr3" class="parallax-container3 valign-wrapper container">
-    <h1 class="parallax-title light selectDisable">Community</h1>
-    <div id="parallax3" class="parallax"></div>
-    <div id="parallax-mobile3" class="noparallax"><img src="assets/images/unc-polk-place.jpg"></div>
-  </div>
-
-  <div class="container sect" style="color: rgba(255, 255, 255, 0.8); background-color: #424242">
-    <div id="community" class="section hideme">
-
-      <div class="row">
-        <div class="row s12 m4">
-          <div class="icon-block">
-            <h6 class="center">Enabling Technology Club</h6>
-            <h6 class="org-title">Vice President/Treasurer</h6>
-            <p class="light">
-              Contribute to the collection of over 10 million books read on
-              <a class="link" href="https://tarheelreader.org/">Tar Heel Reader</a> that allows individuals
-              with disabilities to read for education and enjoyment.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h6 class="center">CS+Social Good</h6>
-            <h6 class="org-title">Member</h6>
-            <p class="light">
-              Collaborate on projects, ranging from web development to data collection, for community organizations,
-              such as <a class="link" href="https://kayblada.com/">Kay Blada Recycling</a>.
-              <br><br>More information about our mission can be found <a class="link"
-                href="https://unc-cssg.org/">here</a>.
-            </p>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h6 class="center">Chapel Hill Math Circle</h6>
-            <h6 class="org-title">Volunteer</h6>
-            <p class="light">
-              Assist in facilitating weekly programs for over 100 enrolled children interested in mathematics.
-              <br><br>Find out more about our passion to express the fun of math <a class="link"
-                href="https://chapelhillmathcircle.org/">here</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="row s12 m4">
-          <div class="icon-block">
-            <h6 class="center">Buckley Public Service Scholars</h6>
-            <h6 class="org-title">Scholar</h6>
-            <p class="light">
-              Exhibit a strong committment to public service through 300 hours
-              of service, four skills trainings, and a service-learning course.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  </div>
-
-  <div id="parallax-ctr4" class="parallax-container4 valign-wrapper container">
     <h1 class="parallax-title light selectDisable">Contact</h1>
-    <div id="parallax4" class="parallax"></div>
-    <div id="parallax-mobile4" class="noparallax"><img src="assets/images/franklin-scene.jpg"></div>
+    <div id="parallax3" class="parallax"></div>
+    <div id="parallax-mobile3" class="noparallax"><img src="assets/images/unc-polk-overhead-mobile.jpg"></div>
   </div>
 
-  <footer id="contact" class="page-footer" style="background-color: #99badd; color: black;">
+  <footer id="contact" class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h4>Let's Connect</h4>
+          <h2>Let's Connect</h2>
           <form name="gform" id="gform" enctype="text/plain"
             action="https://docs.google.com/forms/d/e/1FAIpQLSe-q0NKg5jz16uYn2u1PezcJigH6al7_wEAea3T8mv1ArNb1A/formResponse?usp=pp_url"
             target="hidden_iframe">
             <div class="input-field col s6">
               <input id="entry.1491475932" name="entry.1491475932" type="text" class="validate">
-              <label for="entry.1491475932" class="black-text">First Name</label>
+              <label for="entry.1491475932">First Name</label>
             </div>
             <div class="input-field col s6">
               <input id="entry.181703257" name="entry.181703257" type="text" class="validate">
-              <label for="entry.181703257" class="black-text">Last Name</label>
+              <label for="entry.181703257">Last Name</label>
             </div>
             <div class="input-field col inline">
               <input id="entry.1641095657" name="entry.1641095657" type="email" class="validate">
-              <label for="entry.1641095657" class="black-text">Email</label>
+              <label for="entry.1641095657">Email</label>
             </div><br>
             <div class="input-field col inline">
               <textarea id="entry.2083445618" name="entry.2083445618" class="materialize-textarea validate"></textarea>
-              <label for="entry.2083445618" class="black-text">Message</label>
+              <label for="entry.2083445618">Message</label>
             </div>
-            <br><br><br>
             <input type="submit" value="Submit" id="submit-btn" />
           </form>
 
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+          <iframe name="hidden_iframe" id="hidden-iframe"></iframe>
 
-          <br><br>
-
-          <ul class="icons">
-            <li><a class="black-text" href="http://github.com/austinbhale"><img
-                  src="assets/icons/GitHub-Mark-32px.png">&nbsp;Github</a></li>
-            <li><a class="black-text" href="http://linkedin.com/in/austinbhale/"><img style="margin-left: 2px;"
-                  src="assets/icons/In-Black-28px-R.png">
-                LinkedIn</li>
-            <li><a class="black-text" href="mailto:ah@unc.edu?Subject=Contact"><i
-                  class="material-icons black-text">email</i>&nbsp;
-                Mail</a></li>
-            <li><a class="black-text" href="assets/images/Austin_Hale_Resume.pdf"><i
-                  class="material-icons black-text">person</i>&nbsp;
-                Resume</a></li>
-          </ul>
+          <div class="row icons">
+            <div class="col l3 s12">
+              <a target="_blank" href="http://github.com/austinbhale"><img src="assets/icons/GitHub-Mark-32px.png"></a>
+            </div>
+            <div class="col l3 s12">
+              <a target="_blank" href="http://linkedin.com/in/austinbhale/"><img style="margin-left: 2px;"
+                  src="assets/icons/In-Black-28px-R.png"></a>
+            </div>
+            <div class="col l3 s12">
+              <a target="_blank" href="mailto:ah@unc.edu?Subject=Contact"><i
+                  class="material-icons black-text">email</i></a>
+            </div>
+            <div class="col l3 s12">
+              <a target="_blank" href="assets/images/Austin_Hale_Resume.pdf"><i
+                  class="material-icons black-text">person</i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer-copyright grey darken-3">
-      <div class="container">&#9400; 2019 Austin Hale</div>
+    <div class="footer-copyright">
+      <div class="container">
+        &#9400; 2020 Austin Hale
+      </div>
     </div>
   </footer>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="materialize/js/materialize.min.js"></script>
   <script src="materialize/js/init.js"></script>
-
+  <script src="assets/js/main.min.js"></script>
 </body>
 
 </html>
