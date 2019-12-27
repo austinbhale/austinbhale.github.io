@@ -13,7 +13,7 @@ $(function () {
     // Set visited cookie for returning to displayed text.
     if (getCookie('visited')) {
         $('.hideme').css("opacity", "1.0");
-        (screen.width <= 600) ? $('.moving-line').css("width", "50px") : $('.moving-line').css("width", "100px");
+        (screen.width <= 600) ? $('.moving-line').css("width", "50px"): $('.moving-line').css("width", "100px");
         $("body").removeClass("hideme");
         deleteCookie('visited');
     } else {
@@ -220,6 +220,9 @@ var oldHeight = $('.projects').height();
 var active = false;
 var activeSection = '';
 $(".project-links").click(function (event) {
+    if (active) {
+        return;
+    }
     var section = '.' + event.target.id;
     // Prevent rapid clicking bugs.
     if (!/\.project[0-9]+/i.test(section) || active) {
@@ -228,9 +231,12 @@ $(".project-links").click(function (event) {
     $(section).css("display", "block");
     active = true;
     activeSection = section;
+    var projectsHeight = false;
     $('.projects').animate({
         height: $(section).height() + 15
-    }, 300);
+    }, 200, function () {
+        projectsHeight = true;
+    });
     var morphing = anime({
         targets: '.polymorph',
         points: [{
@@ -241,52 +247,73 @@ $(".project-links").click(function (event) {
             }
         ],
         easing: 'easeOutQuad',
-        duration: 1200,
+        duration: 800,
         loop: false
     });
 
-    anime({
+    var sectionFadeIn = false;
+    var fadeIn = anime({
         targets: section,
         opacity: 1,
         duration: 500,
         easing: 'easeInQuad',
     });
+    fadeIn.finished.then(function () {
+        sectionFadeIn = true;
+    });
 
-    $('.project-links').fadeOut(500);
+    var linksFadeOut = false;
+    $('.project-links').fadeOut(500, function () {
+        linksFadeOut = true;
+    });
 
     var promise = morphing.finished.then(() => {
         $(".cta2").click(function () {
-            var morphing = anime({
-                targets: '.polymorph',
-                points: [{
-                        value: '0,80 0, 110 0, 0 47.7, 0 67, 76'
-                    },
-                    {
-                        value: '0,40 0,110 0,0 49.3,0 215,0'
-                    }
-                ],
-                easing: 'easeOutQuad',
-                duration: 1200,
-                loop: false
-            });
-            anime({
-                targets: section,
-                opacity: 0,
-                duration: 500,
-                easing: 'easeOutQuad'
-            });
+            if (sectionFadeIn && linksFadeOut && projectsHeight) {
 
-            $('.project-links').fadeIn(500);
-            $('.projects').animate({
-                height: oldHeight
-            }, 500);
-            $(section).css("display", "none");
-            active = false;
+                var morphingBack = anime({
+                    targets: '.polymorph',
+                    points: [{
+                            value: '0,80 0, 110 0, 0 47.7, 0 67, 76'
+                        },
+                        {
+                            value: '0,40 0,110 0,0 49.3,0 215,0'
+                        }
+                    ],
+                    easing: 'easeOutQuad',
+                    duration: 800,
+                    loop: false
+                });
+                var fadeOut = anime({
+                    targets: section,
+                    opacity: 0,
+                    duration: 500,
+                    easing: 'easeOutQuad'
+                });
+                fadeOut.finished.then(function () {
+                    sectionFadeIn = false;
+                });
+
+                $('.project-links').fadeIn(500, function () {
+                    linksFadeOut = false;
+                });
+                $('.projects').animate({
+                    height: oldHeight
+                }, 300, function () {
+                    projectsHeight = false;
+                });
+                $(section).toggle();
+                var finished = morphingBack.finished.then(() => {
+                    if (!(sectionFadeIn && linksFadeOut && projectsHeight)) {
+                        active = false;
+                    }
+                });
+            }
         });
     });
 });
 
-window.addEventListener('resize', function(event){
+window.addEventListener('resize', function (event) {
     if (activeSection !== '') {
         $('.projects').height($(activeSection).height() + 15)
     }
