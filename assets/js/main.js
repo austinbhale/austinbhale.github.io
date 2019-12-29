@@ -13,7 +13,7 @@ $(function () {
     // Set visited cookie for returning to displayed text.
     if (getCookie('visited')) {
         $('.hideme').css("opacity", "1.0");
-        (screen.width <= 600) ? $('.moving-line').css("width", "50px"): $('.moving-line').css("width", "100px");
+        (window.innerWidth <= 600) ? $('.moving-line').css("width", "50px"): $('.moving-line').css("width", "100px");
         $("body").removeClass("hideme");
         deleteCookie('visited');
     } else {
@@ -102,7 +102,7 @@ anime.timeline({
     })
     .add({
         targets: '.h',
-        translateY: (screen.width <= 600) ? '14vh' : '25vh',
+        translateY: (window.innerWidth <= 600) ? '14vh' : '25vh',
         easing: 'easeInOutExpo',
         delay: 600,
         endDelay: 300,
@@ -148,7 +148,7 @@ anime.timeline({
 function lines() {
     anime({
         targets: '.moving-line',
-        width: (screen.width <= 600) ? '50px' : '100px',
+        width: (window.innerWidth <= 600) ? '50px' : '100px',
         easing: 'easeOutExpo',
         duration: 2000
     });

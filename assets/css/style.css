@@ -8,6 +8,10 @@ body {
   background-color: #131414;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
