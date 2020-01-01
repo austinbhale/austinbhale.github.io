@@ -357,6 +357,11 @@ input:-webkit-autofill {
   left: -4px;
 }
 
+.fname,
+.lname {
+  opacity: 0;
+}
+
 .h,
 .a {
   position: absolute;
@@ -512,6 +517,7 @@ input:-webkit-autofill {
   overflow: auto;
   height: 80%;
   margin-right: 10px;
+  scrollbar-color: rgba(255, 255, 255, 0.4) #7bafd4;
 }
 
 .project-links::-webkit-scrollbar {
@@ -993,6 +999,24 @@ textarea {
   width: 100%;
 }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media only screen and (min-width: 601px) {
   #profile-pic {
     width: 80%;
@@ -1021,7 +1045,7 @@ textarea {
   }
 
   h2 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   h4 {
@@ -1062,28 +1086,32 @@ textarea {
   .github-icon {
     bottom: 75%;
   }
-  
+
   .linkedin-icon {
     bottom: 55%;
   }
-  
+
   .mail-icon {
     bottom: 35%;
   }
-  
+
   .resume-icon {
     bottom: 15%;
   }
 
-  .fname, .lname, .h, .a {
+  .fname,
+  .lname,
+  .h,
+  .a {
     font-size: 16vw;
   }
 
-  .lname{
+  .lname {
     margin-top: 14vh;
   }
 
-  .h, .lname {
+  .h,
+  .lname {
     left: -2px;
   }
 

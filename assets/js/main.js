@@ -72,6 +72,10 @@ $(function () {
             duration: 2000
         })
         .add({
+            targets: ['.fname', '.lname'],
+            opacity: 1
+        })
+        .add({
             targets: '.animate-ctr .first-letter',
             scale: [0.3, 1],
             opacity: [0, 1],
