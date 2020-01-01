@@ -59,6 +59,54 @@ $(function () {
             }
         }]
     });
+
+    anime.timeline({
+            loop: false
+        })
+        .add({
+            targets: '.h',
+            translateY: (window.innerWidth <= 600) ? '14vh' : '25vh',
+            easing: 'easeInOutExpo',
+            delay: 600,
+            endDelay: 300,
+            duration: 2000
+        })
+        .add({
+            targets: '.animate-ctr .first-letter',
+            scale: [0.3, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: (el, i) => 70 * (i + 1)
+        })
+        .add({
+            targets: '.animate-ctr .last-letter',
+            scale: [0.3, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: (el, i) => 70 * (i + 1)
+        })
+        .add({
+            targets: '.animate-ctr',
+            translateX: '-25%',
+            easing: "easeInOutExpo",
+            duration: 1000
+        })
+        .add({
+            targets: ['.links', '#nav'],
+            opacity: 1,
+            duration: 1600
+        })
+        .add({
+            targets: '.down-arr',
+            opacity: 1,
+            easing: 'easeInOutExpo',
+            duration: 700,
+            translateY: '90vh'
+        });
 });
 
 // Set the cookie for seeing if the page has been visited.
@@ -96,54 +144,6 @@ fNameWrapper.innerHTML = fNameWrapper.textContent.replace(/\S/g, "<span class='f
 
 var lNameWrapper = document.querySelector('.animate-ctr .lname');
 lNameWrapper.innerHTML = lNameWrapper.textContent.replace(/\S/g, "<span class='last-letter'>$&</span>");
-
-anime.timeline({
-        loop: false
-    })
-    .add({
-        targets: '.h',
-        translateY: (window.innerWidth <= 600) ? '14vh' : '25vh',
-        easing: 'easeInOutExpo',
-        delay: 600,
-        endDelay: 300,
-        duration: 2000
-    })
-    .add({
-        targets: '.animate-ctr .first-letter',
-        scale: [0.3, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "easeOutExpo",
-        duration: 600,
-        delay: (el, i) => 70 * (i + 1)
-    })
-    .add({
-        targets: '.animate-ctr .last-letter',
-        scale: [0.3, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "easeOutExpo",
-        duration: 600,
-        delay: (el, i) => 70 * (i + 1)
-    })
-    .add({
-        targets: '.animate-ctr',
-        translateX: '-25%',
-        easing: "easeInOutExpo",
-        duration: 1000
-    })
-    .add({
-        targets: ['.links', '#nav'],
-        opacity: 1,
-        duration: 1600
-    })
-    .add({
-        targets: '.down-arr',
-        opacity: 1,
-        easing: 'easeInOutExpo',
-        duration: 700,
-        translateY: '90vh'
-    });
 
 function lines() {
     anime({
@@ -270,7 +270,7 @@ $(".project-links").click(function (event) {
     var promise = morphing.finished.then(() => {
         $(".cta2").click(function () {
             if (sectionFadeIn && linksFadeOut && projectsHeight) {
-
+                activeSection = '';
                 var morphingBack = anime({
                     targets: '.polymorph',
                     points: [{
