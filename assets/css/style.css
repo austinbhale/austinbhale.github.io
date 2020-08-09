@@ -21,7 +21,7 @@ h5 {
 }
 
 p {
-  font-size: 2vw;
+  font-size: 1.7vw;
   /* line-height: 2vh; */
 }
 
@@ -147,7 +147,7 @@ a:active {
 
 .section {
   display: block;
-  padding: 1em;
+  /* padding: 1em; */
   width: 100%;
   position: relative;
 }
@@ -517,7 +517,7 @@ input:-webkit-autofill {
   overflow: auto;
   height: 80%;
   margin-right: 10px;
-  scrollbar-color: rgba(255, 255, 255, 0.4) #7bafd4;
+  scrollbar-color:rgb(245,245,245);
 }
 
 .project-links::-webkit-scrollbar {
@@ -525,12 +525,12 @@ input:-webkit-autofill {
 }
 
 .project-links::-webkit-scrollbar-track {
-  background: #7bafd4;
+  background: rgb(245,245,245);
   border-radius: 10px;
 }
 
 .project-links::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4);
+  background: #7bafd4;
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
@@ -629,7 +629,7 @@ textarea {
   /* transform: translateY(-800px); */
 }
 
-.blip hr {
+hr {
   border-color: #7bafd4;
   background-color: #7bafd4;
   color: #7bafd4;
@@ -1021,6 +1021,10 @@ textarea {
   #profile-pic {
     width: 80%;
   }
+
+  .projects {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width : 600px) {
@@ -1137,4 +1141,35 @@ textarea {
   #index-banner .section {
     top: 10%;
   }
+}
+
+@media only screen and (min-width: 1350px) {
+  .header {
+    font-size: 140px;;
+  }
+
+  .container {
+    width: 100% !important;
+    /* margin: 0 auto !important; */
+  }
+
+  .project-name a {
+    font-size: 3.5vw;
+  }
+
+  .project-links {
+    width: 800px;
+  }
+}
+
+.folder0, .folder1, .folder2, .folder3, .folder4 {
+  display: none;
+}
+
+.folders {
+  display: block;
+}
+
+.back {
+  display: none;
 }

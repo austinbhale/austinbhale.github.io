@@ -4,7 +4,7 @@ $(function () {
 
     // Remove the scrolling effect for non-mobile devices.
     for (var i = 1; i < 4; i++) {
-        (isMobile) ? $('#parallax-mobile' + i).css("display", "block"): $('#parallax' + i).css("display", "block");
+        (isMobile) ? $('#parallax-mobile' + i).css("display", "block") : $('#parallax' + i).css("display", "block");
         if (isMobile) {
             $('#parallax-ctr' + i).removeClass("parallax-container" + i).addClass("noparallax-container");
         }
@@ -13,7 +13,7 @@ $(function () {
     // Set visited cookie for returning to displayed text.
     if (getCookie('visited')) {
         $('.hideme').css("opacity", "1.0");
-        (window.innerWidth <= 600) ? $('.moving-line').css("width", "50px"): $('.moving-line').css("width", "100px");
+        (window.innerWidth <= 600) ? $('.moving-line').css("width", "50px") : $('.moving-line').css("width", "100px");
         $("body").removeClass("hideme");
         deleteCookie('visited');
     } else {
@@ -61,8 +61,8 @@ $(function () {
     });
 
     anime.timeline({
-            loop: false
-        })
+        loop: false
+    })
         .add({
             targets: '.h',
             translateY: (window.innerWidth <= 600) ? '14vh' : '25vh',
@@ -168,8 +168,8 @@ $('#gform').on('submit', function (e) {
     var elementsValid = document.getElementsByClassName('valid');
     var elementsInvalid = document.getElementsByClassName('invalid');
 
-    (elementsValid.length > 3) ? valids = true: valids = false;
-    (elementsInvalid.length == 0) ? invalids = true: invalids = false;
+    (elementsValid.length > 3) ? valids = true : valids = false;
+    (elementsInvalid.length == 0) ? invalids = true : invalids = false;
 
     if (valids && invalids) {
         $('#gform *').fadeOut(2000, function () {
@@ -186,7 +186,7 @@ $('#gform').on('submit', function (e) {
 // Adjusts fixed navbar height for hashed sections.
 var heightSlider = $('#nav').height();
 var shiftWindow = function () {
-    (location.hash == "#contact") ? scrollBy(0, -heightSlider): scrollBy(0, -heightSlider);
+    (location.hash == "#contact") ? scrollBy(0, -heightSlider) : scrollBy(0, -heightSlider);
 };
 if (location.hash) shiftWindow();
 window.addEventListener("hashchange", shiftWindow);
@@ -228,10 +228,25 @@ $(".project-links").click(function (event) {
         return;
     }
     var section = '.' + event.target.id;
-    // Prevent rapid clicking bugs.
-    if (!/\.project[0-9]+/i.test(section) || active) {
+
+    if (/\.back/i.test(section)) {
+        $(".project-name").css("display", "none");
+        $(".folders").css("display", "block");
         return;
     }
+
+    // Prevent rapid clicking bugs.
+    if (!(/\.project[0-9]+/i.test(section) || /\.folder[0-9]+/i.test(section)) || active) {
+        return;
+    }
+
+    if (/\.folder[0-9]+/i.test(section)) {
+        $(".folders").css("display", "none");
+        $(".back").css("display", "block");
+        $(section).css("display", "block");
+        return;
+    }
+
     $(section).css("display", "block");
     active = true;
     activeSection = section;
@@ -244,11 +259,11 @@ $(".project-links").click(function (event) {
     var morphing = anime({
         targets: '.polymorph',
         points: [{
-                value: '0,40 0, 110 0, 0 47.7, 0 67, 76'
-            },
-            {
-                value: '0,80 0, 110 50, 100 0, 0 0, 76'
-            }
+            value: '0,40 0, 110 0, 0 47.7, 0 67, 76'
+        },
+        {
+            value: '0,80 0, 110 50, 100 0, 0 0, 76'
+        }
         ],
         easing: 'easeOutQuad',
         duration: 800,
@@ -278,11 +293,11 @@ $(".project-links").click(function (event) {
                 var morphingBack = anime({
                     targets: '.polymorph',
                     points: [{
-                            value: '0,80 0, 110 0, 0 47.7, 0 67, 76'
-                        },
-                        {
-                            value: '0,40 0,110 0,0 49.3,0 215,0'
-                        }
+                        value: '0,80 0, 110 0, 0 47.7, 0 67, 76'
+                    },
+                    {
+                        value: '0,40 0,110 0,0 49.3,0 215,0'
+                    }
                     ],
                     easing: 'easeOutQuad',
                     duration: 800,
