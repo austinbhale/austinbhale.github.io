@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
 
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -59,7 +59,9 @@ $(function () {
             }
         }]
     });
+});
 
+window.addEventListener('load', function() {
     anime.timeline({
         loop: false
     })
@@ -67,9 +69,9 @@ $(function () {
             targets: '.h',
             translateY: (window.innerWidth <= 600) ? '14vh' : '25vh',
             easing: 'easeInOutExpo',
-            delay: 600,
-            endDelay: 300,
-            duration: 2000
+            delay: 0,
+            endDelay: 0,
+            duration: 800
         })
         .add({
             targets: ['.fname', '.lname'],
@@ -102,7 +104,7 @@ $(function () {
         .add({
             targets: ['.links', '#nav'],
             opacity: 1,
-            duration: 1600
+            duration: 700
         })
         .add({
             targets: '.down-arr',
