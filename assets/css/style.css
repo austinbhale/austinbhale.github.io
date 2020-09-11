@@ -812,6 +812,11 @@ hr {
   border-bottom: solid 1px #7bafd4;
 }
 
+.research-boxes .slide {
+  box-shadow: 5px 5px 5px #7E00B9;
+  border-bottom: solid 1px #7E00B9;
+}
+
 #experience {
   background-color: #131414;
   color: white;
