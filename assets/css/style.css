@@ -971,6 +971,10 @@ hr {
   border-color: #7E00B9;
 }
 
+.nakamir-triangle-up {
+  border-color: transparent transparent #002f80 transparent;
+}
+
 .unc-triangle-up {
   border-color: transparent transparent #7bafd4 transparent;
 }
@@ -981,6 +985,10 @@ hr {
 
 .ribbon-triangle-up {
   border-color: transparent transparent #7E00B9 transparent;
+}
+
+.nakamir-triangle {
+  border-color: #002f80 transparent transparent transparent;
 }
 
 .unc-triangle {
